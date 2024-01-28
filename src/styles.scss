@@ -1,0 +1,182 @@
+@import "assets/font/style.scss";
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+  text-decoration: none;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font: inherit;
+}
+
+/* Make sure textarea without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+body {
+  background-color: #030303;
+  color: rgba(255, 255, 255, 0.50);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* width */
+  ::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #515151;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #9b9999;
+    border-radius: 10px !important;
+  }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #4c4c4c;
+}
+
+
+
+
+
+
+.wrapper {
+  height: 100svh;
+  display: flex;
+  align-items:flex-start;
+  overflow: hidden;
+  position: relative;
+  
+  .navbar {
+      background-color: #030303;
+      overflow: auto;
+      height: 100%;
+      margin-top: 0px;
+      border-right: 1px solid rgba(255, 255, 255, 0.10);
+      border-top: none;
+      border-left: none;
+      flex-shrink: 0;
+      transition: transform 0.3s ease;
+      padding: 40px;
+
+      &::-webkit-scrollbar {
+          width: 0px;
+      }
+
+      @media (max-width: 1120px) {
+          position: absolute;
+          transform: translateX(-100%);
+
+          &[active] {
+              transform: translateX(0);
+          }
+      }
+  }
+
+  .main {
+      padding: 40px;
+      padding-bottom: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      width: 100%;
+      height: 100%;
+
+      .content {
+          overflow: auto;
+          // padding: 20px;
+          padding-right: 20px;
+          margin-bottom: 40px;
+      }
+  }
+
+  .toggle-btn {
+      display: none;
+  }
+  @media (max-width: 1120px) {
+      .toggle-btn {
+          display: block;
+          position: absolute;
+          z-index: 10;
+          top: 30%;
+          left: 0%;
+          width: 20px;
+          height: 80px;
+          background-color: #fff;
+          border-radius: 0 20px 20px 0;
+      }
+  }
+}
+
+
+.page-box {
+  .page-body {
+  }
+}

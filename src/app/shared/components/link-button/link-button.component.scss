@@ -1,0 +1,28 @@
+:host {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        color: #fff;
+        border: 1px solid #fff;
+        border-radius: 38px;
+        padding: 10px 18px;
+        transition: color, background-color 0.3s ease;
+        
+        &:hover {
+            color: #030303;
+            background-color: #fff;
+        }
+        
+        i {
+
+            & + span {
+                padding-right: 8px;
+            }
+        }
+    }
+}

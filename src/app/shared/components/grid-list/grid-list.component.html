@@ -1,0 +1,8 @@
+<div class="grid-container">
+    @for (item of itemsData; track $index) {
+        <app-grid-list-item
+            [title]="item.title"
+            [imageUrl]="item.imageUrl"
+        ></app-grid-list-item>
+    }
+</div>

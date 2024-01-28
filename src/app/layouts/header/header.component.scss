@@ -1,0 +1,20 @@
+:host {
+    .header-items {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+
+        &::ng-deep {
+            app-search {
+                flex: 1;
+            }
+        }
+
+        .header-buttons {
+            display: flex;
+            align-items: center;
+            gap: 26px;
+        }
+    }
+}

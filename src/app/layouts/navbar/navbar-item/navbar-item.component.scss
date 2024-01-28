@@ -1,0 +1,26 @@
+:host {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: translateX(10px);
+    }
+
+    .item-icon-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 64px;
+        height: 64px;
+        border-radius: 13px;
+        font-weight: 500;
+        
+        i {
+            font-size: 28px;
+        }
+    }
+}

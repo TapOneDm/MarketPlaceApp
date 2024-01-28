@@ -1,0 +1,46 @@
+:host {
+    .navbar-items {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        color: #fff;
+        padding-bottom: 40px;
+        
+        a {
+            text-decoration: none;
+    
+            &:visited {
+                color: unset;
+            }
+    
+            &.router-link-active {
+                transform: translateX(10px);
+            }
+    
+            &:first-child {
+                transform: none;
+            }
+        }
+    }
+
+    .navbar-contacts {
+        padding-top: 40px;
+        display: flex;
+        flex-direction: column;
+        border-top: 1px solid rgba(255, 255, 255, 0.10);
+        gap: 20px;
+        font-size: 16px;
+    
+        .navbar-contacts-icons {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .navbar-contacts-links {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+    }
+}

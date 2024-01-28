@@ -1,0 +1,30 @@
+<div class="search">
+    <div class="search-icon"><i class="icon-search"></i></div>
+    <div class="search-input">
+        <input 
+            #searchInput
+            type="text"
+            placeholder="Search"
+            (focusout)="close()"
+        >
+    </div>
+
+    @if (searchResult.length) {
+        @for (item of searchResult; track $index) {
+            <div class="search-result">
+                <div class="search-result-items">
+                    <div class="search-result-item">
+                        <div class="search-result-item-thumb">
+                            <img src="assets/img/tmp.jpg" alt="">
+                        </div>
+                        <div class="search-result-item-info">
+                            <h5>{{item.title}}</h5>
+                            <p>{{item.text}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+</div>
+

@@ -1,0 +1,46 @@
+:host {
+    .grid-item {
+        max-width: 600px;
+
+        .grid-item-image-box {
+            cursor: pointer;
+            border-radius: 13px;
+            overflow: hidden;
+            
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+
+        .grid-item-info {
+            padding: 14px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .grid-item-info-title {
+                font-size: 20px;
+                cursor: pointer;
+
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+
+            .grid-item-info-icons {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                font-size: 20px;
+
+                i {
+                    cursor: pointer;
+                    &:hover {
+                        opacity: 0.7;
+                    }
+                }
+            }
+        }
+    }
+}

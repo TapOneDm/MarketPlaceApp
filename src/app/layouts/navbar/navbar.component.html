@@ -1,0 +1,21 @@
+<div class="navbar-items">
+    @for (item of navbarItemsData; track $index) {
+        <a [routerLink]="[item.link]" routerLinkActive="router-link-active" >
+            <app-navbar-item [icon]="item.icon" [text]="item.text" [bColor]="item.bColor"></app-navbar-item>
+        </a>
+    }
+</div>
+
+<div class="navbar-contacts">
+    <div class="navbar-contacts-title">Social media</div>
+    <div class="navbar-contacts-icons">
+        <a href=""><i class="icon-telegram-plane"></i></a>
+        <a href=""><i class="icon-twitter"></i></a>
+    </div>
+    <div class="navbar-contacts-links">
+        <a href="https://t.me/dmtskvch" target="_blank">Telegram link</a>
+        <a href="https://github.com/TapOneDm" target="_blank">My github</a>
+    </div>
+</div>
+
+
