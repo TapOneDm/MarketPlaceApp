@@ -6,7 +6,16 @@
         <div class="search-input"><input type="text" placeholder="Search"></div>
     </div> -->
     <div class="header-buttons">
-        <app-link-button [icon]="'icon-money-bill-wave'" [link]="'#'" [text]="'Card'"></app-link-button>
+        <div class="card-button">
+            @if (pickedCount) {
+                <div class="card-picked-count">
+                    {{pickedCount}}
+                </div>
+            }
+            <i class="icon-shopping-bag"></i>
+        </div>
+        <!-- <app-link-button [icon]="'icon-shopping-bag'" [link]="'#'" [text]="'Card'"></app-link-button> -->
+
         <app-link-button [icon]="'icon-portal-exit'" [link]="'#'" [text]="'Sign up'"></app-link-button>
         <app-link-button [icon]="'icon-portal-exit'" [link]="'#'" [text]="'Sign in'"></app-link-button>
     </div>

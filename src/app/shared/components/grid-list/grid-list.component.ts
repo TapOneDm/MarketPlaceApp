@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
 import { GridListItemComponent } from './grid-list-item/grid-list-item.component';
-import { data } from './dummy-data';
 
 @Component({
   selector: 'app-grid-list',
@@ -12,9 +11,9 @@ import { data } from './dummy-data';
   styleUrl: './grid-list.component.scss'
 })
 export class GridListComponent {
-  @Input() itemsData: Array<any> = [];
+  @Input() items: Array<any> = [];
 
   ngOnInit() {
-    this.itemsData = data;
+
   }
 }
